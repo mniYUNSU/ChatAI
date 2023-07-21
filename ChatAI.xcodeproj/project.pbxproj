@@ -13,6 +13,8 @@
 		0A8773D92A6A58FD001686EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8773D72A6A58FD001686EF /* Main.storyboard */; };
 		0A8773DB2A6A58FE001686EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A8773DA2A6A58FE001686EF /* Assets.xcassets */; };
 		0A8773DE2A6A58FE001686EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8773DC2A6A58FE001686EF /* LaunchScreen.storyboard */; };
+		0A8773E92A6A59C3001686EF /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8773E82A6A59C3001686EF /* ApiCaller.swift */; };
+		0A8773EC2A6A5F54001686EF /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0A8773EB2A6A5F54001686EF /* OpenAISwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		0A8773DA2A6A58FE001686EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A8773DD2A6A58FE001686EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A8773DF2A6A58FE001686EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A8773E82A6A59C3001686EF /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A8773EC2A6A5F54001686EF /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +67,7 @@
 				0A8773DA2A6A58FE001686EF /* Assets.xcassets */,
 				0A8773DC2A6A58FE001686EF /* LaunchScreen.storyboard */,
 				0A8773DF2A6A58FE001686EF /* Info.plist */,
+				0A8773E82A6A59C3001686EF /* ApiCaller.swift */,
 			);
 			path = ChatAI;
 			sourceTree = "<group>";
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = ChatAI;
+			packageProductDependencies = (
+				0A8773EB2A6A5F54001686EF /* OpenAISwift */,
+			);
 			productName = ChatAI;
 			productReference = 0A8773CE2A6A58FD001686EF /* ChatAI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 0A8773C52A6A58FD001686EF;
+			packageReferences = (
+				0A8773EA2A6A5F54001686EF /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = 0A8773CF2A6A58FD001686EF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,6 +152,7 @@
 				0A8773D62A6A58FD001686EF /* ViewController.swift in Sources */,
 				0A8773D22A6A58FD001686EF /* AppDelegate.swift in Sources */,
 				0A8773D42A6A58FD001686EF /* SceneDelegate.swift in Sources */,
+				0A8773E92A6A59C3001686EF /* ApiCaller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +368,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0A8773EA2A6A5F54001686EF /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0A8773EB2A6A5F54001686EF /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A8773EA2A6A5F54001686EF /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0A8773C62A6A58FD001686EF /* Project object */;
 }
